@@ -1,0 +1,19 @@
+
+public class DataTypes {
+
+	public static void main(String[] args) {
+		long l1 = 2500000000;
+		short s1 = (short)l1; // explicit casting
+		System.out.println(s1);
+		
+		byte b1 = 10;
+		int i1 = b1; // implicit casting
+		System.out.println(i1);
+		
+		// float and double
+		
+		float f1 = 3.14F;
+		
+	}
+
+}

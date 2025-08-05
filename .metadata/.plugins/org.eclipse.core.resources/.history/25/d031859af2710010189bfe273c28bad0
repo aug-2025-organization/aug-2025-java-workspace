@@ -1,0 +1,62 @@
+import javax.swing.plaf.synth.SynthOptionPaneUI;
+
+public class OperatorsDemo {
+
+	public static void main(String[] args) {
+
+		// & | << >> >>>
+		int num1 = 5;
+		int num2 = 3;
+		int num3 = num1 | num2;
+		// 0000 0101 
+		// 0000 0011
+		// 0000 0001
+		// 0000 0111
+		System.out.println(num3);
+
+		int num4 = 3 << 2;
+		// 0000 0011
+		// 0000 0110
+		// 0000 1100
+		System.out.println(num4);
+		int num5 = 5 >> 2;
+		// 0000 0101
+		// 0000 0010
+		// 0000 0001
+		System.out.println(num5);	
+			
+		
+		boolean result = 5 > 10 && 5 > 3;
+		boolean result1 = 5 > 10 & 5 > 3;
+		
+		System.out.println(result);
+		System.out.println(result1);
+		
+		int day = 6;
+		// switch statement
+		switch(day) {
+		case 6 ->{
+			System.out.println("Saturday");
+			System.out.println("Saturday");
+		}
+		case 7 ->
+			System.out.println("Sunday");
+		
+		default ->
+			System.out.println("Weekday");
+		}
+		
+		// switch expression
+		String dayName = switch(day) {
+		case 6 -> {
+			num1++;
+			"Saturday";
+			}
+		case 7 -> "Sunday";
+		default -> "Weekday";
+		};
+		System.out.println(dayName);
+		
+		
+	}
+}

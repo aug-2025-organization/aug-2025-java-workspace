@@ -1,0 +1,11 @@
+
+public class DataTypes {
+
+	public static void main(String[] args) {
+		long l1 = 2500;
+		short s1 = l1;
+		
+		
+	}
+
+}

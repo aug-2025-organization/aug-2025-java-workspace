@@ -1,0 +1,15 @@
+
+public class DataTypes {
+
+	public static void main(String[] args) {
+		long l1 = 2500000000L;
+		short s1 = (short)l1;
+		System.out.println(s1);
+		
+		
+		byte b1 = 10;
+		int i1 = b1;
+		
+	}
+
+}
