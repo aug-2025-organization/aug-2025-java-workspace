@@ -1,0 +1,8 @@
+
+public class FordFigoUltraProMax extends FordFigo{
+	int noOfAirbags;
+	
+	String ejectAirbags() {
+		return modelName + " ejected " + noOfAirbags + " airbags...";
+	}
+}

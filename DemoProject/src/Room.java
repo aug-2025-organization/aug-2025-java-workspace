@@ -2,12 +2,29 @@ public class Room {
 	int length;
 	int width;
 	int height;
+	String roomColor;
+	String roomName;
+
+	Room(int length, int width, int height){
+		this.length = length;
+		this.width = width;
+		this.height = height;
+	}
+	
+	// constructor overloading
+	Room(int length, int width, int height, String roomName){
+		this(length, width, height); // constructor chaining
+//		this.length = length;
+//		this.width = width;
+//		this.height = height;
+		this.roomName = roomName;
+	}
 	
 	int calculateFloorArea() {
 		int floorArea = length * width;
 		return floorArea;
 	}
-	
+
 	double calculateWallPaintingCost(double paintingRate) {
 		int wallArea = 2 * height * (length + width);
 		double paintingCost = wallArea * paintingRate;

@@ -1,0 +1,12 @@
+
+public class FordFigo {
+	String modelName;
+	int seater;
+	String color;
+	int variant;
+	
+	String startCar() {
+		return modelName + " started...";
+	}
+	
+}

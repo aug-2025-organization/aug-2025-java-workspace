@@ -1,0 +1,10 @@
+
+public class FordDemo {
+
+	public static void main(String[] args) {
+		FordFigo ford1 = new FordFigo("Ford Figo", "Silver", "Geared");
+		
+
+	}
+
+}

@@ -1,0 +1,33 @@
+
+public class FordFigo {
+	String modelName;
+	final int seater;
+	String color;
+	String variant;
+	
+	public FordFigo() {
+	}
+
+	public FordFigo(String modelName, String color, String variant) {
+		this.seater = 5;
+		this.modelName = modelName;
+		this.color = color;
+		this.variant = variant;
+	}
+
+	String startCar() {
+		return modelName + " started...";
+	}
+	
+	String accelerate() {
+		return modelName + " accelerated...";
+	}
+	
+	String applyBrakes() {
+		return modelName + " applied disc brakes...";
+	}
+	
+	String stopCar() {
+		return modelName + " stopped...";
+	}
+}
