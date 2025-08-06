@@ -2,7 +2,6 @@ public class Animal {
 	String commonName;
 
 	public Animal(String commonName) {
-		super();
 		this.commonName = commonName;
 	}
 

@@ -19,19 +19,9 @@ public class AnimalDemo {
 		System.out.println(animal2.mobility());
 		//System.out.println(animal2.friendly());
 		
-		Dog dog2 = (Dog) animal2; // downcasting/explicit asting
-		System.out.println(dog2.friendly());
-		
-		Animal animal3 = dog2; // upcasting/implicit casting
-		
-		// how to avoid ClassCastException?
-		
-		if(animal3 instanceof Snake) {
-			Snake snake2 = (Snake)animal3;
-		}else if(animal3 instanceof Dog) {
-			Dog dog3 = (Dog) animal3;
-		}
+		Dog dog2 = animal2;
 		
 		
+		animal2 = new Snake("Snake");
 	}
 }

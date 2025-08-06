@@ -26,12 +26,7 @@ public class AnimalDemo {
 		
 		// how to avoid ClassCastException?
 		
-		if(animal3 instanceof Snake) {
-			Snake snake2 = (Snake)animal3;
-		}else if(animal3 instanceof Dog) {
-			Dog dog3 = (Dog) animal3;
-		}
-		
+		Snake snake2 = (Snake)animal3;
 		
 	}
 }

@@ -2,10 +2,9 @@ public class Animal {
 	String commonName;
 
 	public Animal(String commonName) {
-		super();
 		this.commonName = commonName;
 	}
-
+	
 	String livingThing() {
 		return commonName + " breathes by taking in Oxygen and giving out CO2...";
 	}

@@ -1,0 +1,18 @@
+public class AnimalDemo {
+	public static void main(String[] args) {
+		Animal animal = new Animal("animal");
+		System.out.println(animal.livingThing());
+		System.out.println(animal.mobility());
+		
+		Dog dog = new Dog("Dog");
+		System.out.println(dog.livingThing());
+		System.out.println(dog.mobility());
+		System.out.println(dog.friendly());
+		
+		Snake snake = new Snake("Snake");
+		System.out.println(snake.livingThing());
+		System.out.println(snake.mobility());
+		System.out.println(snake.attacks());
+		
+	}
+}
