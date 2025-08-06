@@ -1,0 +1,16 @@
+
+public class Animal {
+	String commonName;
+
+	public Animal(String commonName) {
+		this.commonName = commonName;
+	}
+	
+	String livingThing() {
+		return commonName + " breathes by taking in Oxygen and giving out CO2...";
+	}
+	
+	String mobility() {
+		return commonName + " moves...";
+	}
+}
