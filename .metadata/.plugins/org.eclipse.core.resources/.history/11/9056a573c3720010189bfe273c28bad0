@@ -49,10 +49,6 @@ public class Room {
 		Room other = (Room) obj;
 		return height == other.height && length == other.length && width == other.width;
 	}
-
-	@Override
-	public String toString() {
-		return "Room [length=" + length + ", width=" + width + ", height=" + height + ", roomColor=" + roomColor
-				+ ", roomName=" + roomName + "]";
-	}
+	
+	
 }

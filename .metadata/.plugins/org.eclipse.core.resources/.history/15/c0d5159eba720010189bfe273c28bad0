@@ -1,5 +1,3 @@
-import java.util.Objects;
-
 public class Room {
 	int length;
 	int width;
@@ -32,27 +30,9 @@ public class Room {
 		double paintingCost = wallArea * paintingRate;
 		return paintingCost;
 	}
-
+	
 	@Override
-	public int hashCode() {
-		return Objects.hash(height, length, width);
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Room other = (Room) obj;
-		return height == other.height && length == other.length && width == other.width;
-	}
-
-	@Override
-	public String toString() {
-		return "Room [length=" + length + ", width=" + width + ", height=" + height + ", roomColor=" + roomColor
-				+ ", roomName=" + roomName + "]";
+	public boolean equals(Room other) {
+		return false;
 	}
 }

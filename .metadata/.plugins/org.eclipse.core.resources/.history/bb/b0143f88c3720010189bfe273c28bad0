@@ -45,7 +45,7 @@ public class RoomDemo {
 		System.out.println("room5.equals(room6) : " + room5.equals(room6));
 		System.out.println("room6.equals(room3) : " + room6.equals(room3));
 		
-		System.out.println(room3.toString());
+		System.out.println(room3);
 	}
 
 }
