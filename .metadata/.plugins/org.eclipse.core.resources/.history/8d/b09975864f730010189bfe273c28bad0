@@ -22,50 +22,13 @@ public class Room {
 		this.roomName = roomName;
 	}
 	
-	// getter/accessors
-	// provide read access to the variable
 	public int getLength() {
 		return this.length;
 	}
 	
-	// setter/ mutator
-	// provide write access to the variable
 	public void setLength(int length) {
 		this.length = length;
 	}
-	
-	public int getWidth() {
-		return width;
-	}
-
-	public void setWidth(int width) {
-		this.width = width;
-	}
-
-	public int getHeight() {
-		return height;
-	}
-
-	public void setHeight(int height) {
-		this.height = height;
-	}
-
-	public String getRoomColor() {
-		return roomColor;
-	}
-
-	public void setRoomColor(String roomColor) {
-		this.roomColor = roomColor;
-	}
-
-	public String getRoomName() {
-		return roomName;
-	}
-
-	public void setRoomName(String roomName) {
-		this.roomName = roomName;
-	}
-
 	int calculateFloorArea() {
 		int floorArea = length * width;
 		return floorArea;
