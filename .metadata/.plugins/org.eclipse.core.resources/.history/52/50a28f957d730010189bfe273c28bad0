@@ -1,0 +1,44 @@
+public class ArrayDemo {
+	public static void main(String[] args) {
+		int[] myMarks = new int[5];
+		
+		myMarks[0] = 40;
+		myMarks[1] = 60;
+		myMarks[2] = 80;
+		myMarks[3] = 30;
+		myMarks[4] = 90;
+		
+		for(int i=0;i<myMarks.length;i++) {
+			System.out.print(myMarks[i] + " ");
+		}
+		System.out.println();
+		
+		// array initialization
+		char[] vowels = {'a', 'e', 'i', 'o', 'u'};
+		for(char ch: vowels) {
+			System.out.print(ch + " ");
+		}
+		
+		Object obj = vowels;
+		char[] vw = (char[])obj;
+		
+		System.out.println("\n------------------");
+		int[][] matrixA = new int[3][2];
+		
+		matrixA[0][0] = 10;
+		matrixA[0][1] = 50;
+		matrixA[1][0] = 20;
+		matrixA[1][1] = 90;
+		matrixA[2][0] = 80;
+		matrixA[2][1] = 60;
+		
+		for(int i=0;i<matrixA.length;i++) {
+			for(int j=0;j<matrixA[i].length;j++) {
+				System.out.print(matrixA[i][j] + " ");
+			}
+			System.out.println();
+		}
+		
+		int[][] matrixB = {{2,4,5}, {1,6,8}};
+	}
+}

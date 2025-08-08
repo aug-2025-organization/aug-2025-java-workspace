@@ -1,0 +1,24 @@
+public class ArrayDemo {
+	public static void main(String[] args) {
+		int[] myMarks = new int[5];
+		
+		myMarks[0] = 40;
+		myMarks[1] = 60;
+		myMarks[2] = 80;
+		myMarks[3] = 30;
+		myMarks[4] = 90;
+		
+		for(int i=0;i<myMarks.length;i++) {
+			System.out.print(myMarks[i] + " ");
+		}
+		System.out.println();
+		// array initialization
+		char[] vowels = {'a', 'e', 'i', 'o', 'u'};
+		for(char ch: vowels) {
+			System.out.print(ch + " ");
+		}
+		
+		Object obj = vowels;
+		char[] vw = obj;
+	}
+}
