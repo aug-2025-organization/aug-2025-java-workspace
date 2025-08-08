@@ -1,0 +1,6 @@
+
+public class Addition<T> implements Operation{
+
+	
+	
+}

@@ -1,0 +1,8 @@
+
+public class BoxGenerics<T> {
+	private T length;
+	private T breadth;
+	private T height;
+	
+	
+}

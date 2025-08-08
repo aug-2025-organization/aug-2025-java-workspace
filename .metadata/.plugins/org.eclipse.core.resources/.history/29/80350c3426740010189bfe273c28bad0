@@ -1,0 +1,12 @@
+
+public class OperationDemo {
+
+	public static void main(String[] args) {
+		Operation add1 = new Addition();
+		System.out.println("first way : add : " + add1.operate(5, 3));
+		
+		Operation mul1 = new Multiplication();
+		System.out.println("first way : product : " + mul1.operate(4, 3));
+	}
+
+}

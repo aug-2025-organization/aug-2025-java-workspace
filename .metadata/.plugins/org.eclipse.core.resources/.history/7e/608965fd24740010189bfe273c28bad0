@@ -1,0 +1,17 @@
+
+public class BoxDemo {
+
+	public static void main(String[] args) {
+		Box box1 = new Box(20, 15, 10);
+		System.out.println(box1);
+		
+		BoxGenerics<Integer> box2 = new BoxGenerics<>(20, 15, 10, "white");
+		System.out.println(box2);
+
+		BoxGenerics<Double> box3 = new BoxGenerics<Double>(15.5, 10.5, 5.0);
+		System.out.println(box3);
+		
+		BoxGenerics<String> box4 = new BoxGenerics<String>("15", "10", "5");
+	}
+
+}

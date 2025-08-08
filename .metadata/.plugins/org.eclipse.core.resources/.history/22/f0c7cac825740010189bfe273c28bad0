@@ -1,0 +1,9 @@
+
+public class Addition implements Operation{
+
+	@Override
+	public Number operate(Number num1, Number num2) {
+		return num1 + num2;
+	}
+
+}

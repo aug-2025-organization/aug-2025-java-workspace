@@ -1,0 +1,9 @@
+
+public class OperationDemo {
+
+	public static void main(String[] args) {
+		Operation add1 = new Addition();
+		System.out.println("first way : " + add1.operate(5, 3));
+	}
+
+}

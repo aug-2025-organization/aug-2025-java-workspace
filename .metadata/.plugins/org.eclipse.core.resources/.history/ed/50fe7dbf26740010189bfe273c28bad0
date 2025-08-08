@@ -1,0 +1,21 @@
+
+public class OperationDemo {
+
+	public static void main(String[] args) {
+		Operation opp = new Addition();
+		System.out.println("first way : add : " + opp.operate(5, 3));
+		
+		opp = new Multiplication();
+		System.out.println("first way : product : " + opp.operate(4, 3));
+		
+		Operation add1 = new Operation() {
+
+			@Override
+			public int operate(int n1, int n2) {
+				return n1 + n2;
+			}
+			
+		};
+	}
+
+}
