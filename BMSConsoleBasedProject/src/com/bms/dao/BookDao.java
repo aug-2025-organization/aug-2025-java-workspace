@@ -1,11 +1,11 @@
 package com.bms.dao;
 
-import java.util.List;
+import java.util.Set;
 
 import com.bms.pojos.BookPojo;
 
 public interface BookDao {
-	List<BookPojo> getAllBooks();
+	Set<BookPojo> getAllBooks();
 	BookPojo getABook(int bookId);
 	BookPojo addBook(BookPojo newBook);
 	BookPojo updateBook(BookPojo editBook);
