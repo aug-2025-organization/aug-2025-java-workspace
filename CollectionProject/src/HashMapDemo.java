@@ -1,6 +1,7 @@
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.Scanner;
 import java.util.Set;
 
 public class HashMapDemo {
@@ -35,5 +36,13 @@ public class HashMapDemo {
 		}
 		
 		System.out.println("------------");
+		 Scanner obj = new Scanner(System.in);
+	        String userInput = obj.next();
+	        char[] userInputChar = userInput.toCharArray();
+	        int k = obj.nextInt();
+	        for(int i=k;i<=userInput.length();i+=k){
+	        	userInputChar[i-1] = Character.toUpperCase(userInputChar[i-1]);
+	    }
+	        System.out.println(new String(userInputChar));
 	}
 }
