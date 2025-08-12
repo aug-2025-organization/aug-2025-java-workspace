@@ -36,7 +36,5 @@ public class TreeSetDemo {
 		allBoxes.add(new Box(5, 25, 12, 5));
 		
 		allBoxes.forEach((eachBox) -> System.out.println(eachBox));
-	
 	}
-
 }
