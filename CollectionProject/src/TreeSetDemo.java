@@ -15,7 +15,18 @@ public class TreeSetDemo {
 		allColors.forEach((eachColor) -> System.out.println(eachColor));
 		
 		System.out.println("--------------");
-		SortedSet<Box> allBoxes = new TreeSet<>();
+//		SortedSet<Box> allBoxes = new TreeSet<>();
+		SortedSet<Box> allBoxes = new TreeSet<>((box1, box2) -> {
+			if((box1.getLength() - box2.getLength()) == 0) {
+				if((box1.getWidth() - box2.getWidth()) == 0) {
+					return box1.getHeight() - box2.getHeight();
+				} else {
+					return box1.getWidth() - box2.getWidth();
+				}
+			}else {
+				return box1.getLength() - box2.getLength();
+			}
+		});
 		
 		allBoxes.add(new Box(1, 20, 10, 5));
 		allBoxes.add(new Box(2, 25, 12, 6));

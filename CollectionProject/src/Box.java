@@ -1,6 +1,7 @@
 import java.util.Objects;
 
-public class Box implements Comparable{
+//public class Box implements Comparable{
+public class Box {
 	private int id;
 	private int height;
 	private int width;
@@ -71,20 +72,20 @@ public class Box implements Comparable{
 				+ "]";
 	}
 
-	@Override
-	public int compareTo(Object o) {
-		//int currentVolume = this.length * this.width * this.height;
-		Box otherBox = (Box) o;
-		//int otherVolume = otherBox.length * otherBox.width * otherBox.height;
-		//return currentVolume - otherVolume;
-		if((this.length - otherBox.length) == 0) {
-			if((this.width - otherBox.width) == 0) {
-				return this.height - otherBox.height;
-			} else {
-				return this.width - otherBox.width;
-			}
-		}else {
-			return this.length - otherBox.length;
-		}
-	}
+//	@Override
+//	public int compareTo(Object o) {
+//		//int currentVolume = this.length * this.width * this.height;
+//		Box otherBox = (Box) o;
+//		//int otherVolume = otherBox.length * otherBox.width * otherBox.height;
+//		//return currentVolume - otherVolume;
+//		if((this.length - otherBox.length) == 0) {
+//			if((this.width - otherBox.width) == 0) {
+//				return this.height - otherBox.height;
+//			} else {
+//				return this.width - otherBox.width;
+//			}
+//		}else {
+//			return this.length - otherBox.length;
+//		}
+//	}
 }
