@@ -45,5 +45,7 @@ public class HashSetDemo {
 		});
 		numbers.forEach((eachNum) -> System.out.println(eachNum));
 		System.out.println("------------");
+		
+		
 	}
 }
