@@ -1,3 +1,4 @@
+import java.time.LocalDate;
 import java.util.Scanner;
 import java.util.Set;
 
@@ -39,8 +40,48 @@ public class BMSMainPresentation {
 						System.out.println(fetchedBook);
 					}
 				}
-				case 3 -> System.out.println("Add a Book");
-				case 4 -> System.out.println("Update a Book");
+				case 3 -> {
+					System.out.println("******************************");
+
+					System.out.println("Enter Book Title : ");
+					scan.nextLine();
+					String bookTitle = scan.nextLine();
+					System.out.println("Enter Book Author Name : ");
+					String bookAuthor = scan.nextLine();
+					System.out.println("Enter Book Published Date(YYYY-MM-DD) : ");
+					String dateStr = scan.next();
+					LocalDate publishedDate = LocalDate.parse(dateStr);
+					System.out.println("Enter Book Category : ");
+					scan.nextLine();
+					String bookCategory = scan.nextLine();
+					
+					System.out.println("Enter Book Price : ");
+					double bookPrice = scan.nextDouble();
+					
+					BookPojo newBook = new BookPojo(0, bookTitle, bookAuthor, publishedDate, bookCategory, bookPrice, "");
+					
+					BookPojo addBook = bookService.addBook(newBook);
+					System.out.println("******************************");
+					System.out.println("New Book added successfully!!");
+					System.out.println(addBook);
+				}
+				case 4 -> {
+					System.out.println("Enter the book(ID) to be edited: ");
+					int bookId = scan.nextInt();
+					BookPojo fetchedBook = bookService.getABook(bookId);
+					if(fetchedBook == null){
+						System.out.println("Sorry! Book with ID: " + bookId + " does not exist!");
+					} else {
+						System.out.println(fetchedBook);
+					}
+					System.out.println("Enter updated book price : ");
+					double bPrice = scan.nextDouble();
+					fetchedBook.setBookPrice(bPrice);
+					
+					bookService.updateBook(fetchedBook);
+					System.out.println("Book Updated Succesfully!!");
+					
+				}
 				case 5 -> {
 					System.out.println("Enter the book(ID) to be removed: ");
 					int bookId = scan.nextInt();

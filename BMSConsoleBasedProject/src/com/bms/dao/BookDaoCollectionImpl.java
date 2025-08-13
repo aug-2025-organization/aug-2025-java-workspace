@@ -39,7 +39,7 @@ public class BookDaoCollectionImpl implements BookDao {
 
 	@Override
 	public BookPojo addBook(BookPojo newBook) {
-		BookPojo maxBook = Collections.max(bookDataStore, (obj1, obj2) -> obj2.getBookId() - obj1.getBookId());
+		BookPojo maxBook = Collections.max(bookDataStore, (obj1, obj2) -> obj1.getBookId() - obj2.getBookId());
 		newBook.setBookId(maxBook.getBookId() + 1);
 		bookDataStore.add(newBook);
 		return newBook;
