@@ -1,4 +1,3 @@
-
 public class ThreadPriorityDemo {
 
 	public static void main(String[] args) {
@@ -20,5 +19,4 @@ public class ThreadPriorityDemo {
 		System.out.println(cpt1.t.getName() + " with priority " + cpt1.t.getPriority() + " counter value: " + cpt1.counter);
 		System.out.println(cpt2.t.getName() + " with priority " + cpt2.t.getPriority() + " counter value: " + cpt2.counter);
 	}
-
 }
