@@ -45,10 +45,5 @@ public class JdbcInsertDemo {
 				e.printStackTrace();
 			}
 		}
-		
-		
-		
-
 	}
-
 }
