@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="myEmp" class="mybeans.Employee" scope="prototype">
+		<!-- <constructor-arg name="empId" value="201"></constructor-arg>
+		<constructor-arg name="empName" value="Will Smith"></constructor-arg>
+		<constructor-arg name="empDesignation" value="Lead"></constructor-arg> -->
+		<property name="empId" value="505"></property>
+		<property name="empName" value="Janet Jackson"></property>
+		<property name="empDesignation" value="Developer"></property>
+	</bean>
+	
+	<bean id="addr" class="mybeans.Address">
+		<constructor-arg name="addId" value="444"></constructor-arg>
+		<constructor-arg name="city" value="Trivandrum"></constructor-arg>
+		<constructor-arg name="state" value="Kerala"></constructor-arg>
+	</bean>
+	
+	<bean id="cust" class="mybeans.Customer">
+		<constructor-arg name="customerId" value="777"></constructor-arg>
+		<constructor-arg name="customerName" value="XYZ"></constructor-arg>
+		<constructor-arg name="customerAddress" ref="addr"></constructor-arg>
+	</bean>
+	
+</beans>
