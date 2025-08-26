@@ -2,6 +2,7 @@ package com.bms_rest_jdbc.dao;
 
 import java.util.List;
 
+import com.bms_rest_jdbc.pojo.Book2Pojo;
 import com.bms_rest_jdbc.pojo.BookPojo;
 
 public interface BookDao {
@@ -10,4 +11,5 @@ public interface BookDao {
 	BookPojo addBook(BookPojo newBook);
 	BookPojo updateBook(BookPojo editBook);
 	void deleteBook(int bookId);
+	Book2Pojo getABookAuthor(int bookId);
 }

@@ -7,6 +7,7 @@ import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
+import com.bms_rest_jdbc.pojo.Book2Pojo;
 import com.bms_rest_jdbc.pojo.BookPojo;
 
 //@Component
@@ -41,6 +42,11 @@ public class BookDaoImpl implements BookDao{
 	@Override
 	public void deleteBook(int bookId) {
 		jdbcTemplate.update(DBQueries.BOOK_DELETE, bookId);
+	}
+
+	@Override
+	public Book2Pojo getABookAuthor(int bookId) {
+		return jdbcTemplate.queryForObject(DBQueries.BOOK_AUTHOR_A, new BookMapper(), bookId);
 	}
 
 }

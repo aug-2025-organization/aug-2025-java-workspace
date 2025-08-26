@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.bms_rest_jdbc.pojo.Book2Pojo;
 import com.bms_rest_jdbc.pojo.BookPojo;
 import com.bms_rest_jdbc.service.BookService;
 
@@ -46,5 +47,10 @@ public class BookController {
 	@PostMapping("/books")
 	public BookPojo addBook(@RequestBody BookPojo newBook) {
 		return bookService.addBook(newBook);
+	}
+	
+	@GetMapping("/books/author/{bid}")
+	public Book2Pojo getABookAuthor(@PathVariable("bid") int bookId) {
+		return bookService.getABookAuthor(bookId);
 	}
 }
