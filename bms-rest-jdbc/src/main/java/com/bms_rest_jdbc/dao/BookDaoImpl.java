@@ -23,7 +23,7 @@ public class BookDaoImpl implements BookDao{
 
 	@Override
 	public BookPojo getABook(int bookId) {
-		return jdbcTemplate.queryForObject(DBQueries.BOOK_FETCH_A, BookPojo.class, bookId);
+		return jdbcTemplate.queryForObject(DBQueries.BOOK_FETCH_A, new BeanPropertyRowMapper<BookPojo>(BookPojo.class), bookId);
 	}
 
 	@Override
