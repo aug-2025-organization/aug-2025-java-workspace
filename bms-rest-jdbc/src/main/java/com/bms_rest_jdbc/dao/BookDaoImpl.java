@@ -23,22 +23,24 @@ public class BookDaoImpl implements BookDao{
 
 	@Override
 	public BookPojo getABook(int bookId) {
-		return null;
+		return jdbcTemplate.queryForObject(DBQueries.BOOK_FETCH_A, BookPojo.class, bookId);
 	}
 
 	@Override
 	public BookPojo addBook(BookPojo newBook) {
-		return null;
+		jdbcTemplate.update(DBQueries.BOOK_ADD, newBook.getBookTitle(), newBook.getBookAuthorId(), newBook.getBookPublished(), newBook.getBookCategory(), newBook.getBookPrice(), newBook.getBookImageUrl());
+		return newBook;
 	}
 
 	@Override
 	public BookPojo updateBook(BookPojo editBook) {
-		return null;
+		jdbcTemplate.update(DBQueries.BOOK_UPDATE, editBook.getBookPrice(), editBook.getBookId());
+		return editBook;
 	}
 
 	@Override
 	public void deleteBook(int bookId) {
-		
+		jdbcTemplate.update(DBQueries.BOOK_DELETE, bookId);
 	}
 
 }
