@@ -23,7 +23,6 @@ public class BookDaoImpl implements BookDao{
 
 	@Override
 	public BookPojo getABook(int bookId) {
-		//return jdbcTemplate.query(DBQueries.BOOK_FETCH_A, bookId, BeanPropertyRowMapper.newInstance(BookPojo.class));
 		return null;
 	}
 
@@ -34,7 +33,6 @@ public class BookDaoImpl implements BookDao{
 
 	@Override
 	public BookPojo updateBook(BookPojo editBook) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
