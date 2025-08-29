@@ -34,4 +34,8 @@ public class BookService{
 	public void deleteBook(int bookId) {
 		bookDao.deleteById(bookId);
 	}
+	
+	public List<BookEntity> getAllBooksByCategory(String bookCategory){
+		return bookDao.findByBookCategory(bookCategory);
+	}
 }

@@ -2,8 +2,9 @@ package com.spring_rest_jpa.dao.entity;
 
 import java.util.List;
 
-import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -33,7 +34,7 @@ public class AuthorEntity {
 	@Column(name="author_lastname")
 	private String authorLastname;
 	
-	@JsonManagedReference
-	@OneToMany(mappedBy = "author")
+	@JsonBackReference
+	@OneToMany(mappedBy = "author", cascade = CascadeType.REMOVE)
 	List<BookEntity> allBooks;
 }

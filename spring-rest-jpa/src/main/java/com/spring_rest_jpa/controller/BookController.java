@@ -50,4 +50,9 @@ public class BookController {
 	public ResponseEntity<BookEntity> addBook(@RequestBody BookEntity newBook) {
 		return new ResponseEntity<BookEntity>(bookService.addBook(newBook), HttpStatus.OK);
 	}
+	
+	@GetMapping("/books/category/{bookCategory}")
+	public ResponseEntity<List<BookEntity>> getAllBooksByCategory(@PathVariable String bookCategory){
+		return new ResponseEntity<List<BookEntity>>(bookService.getAllBooksByCategory(bookCategory), HttpStatus.OK);
+	}
 }
