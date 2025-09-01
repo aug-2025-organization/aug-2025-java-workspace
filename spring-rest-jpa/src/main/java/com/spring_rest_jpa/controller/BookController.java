@@ -18,6 +18,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.spring_rest_jpa.dao.entity.BookEntity;
 import com.spring_rest_jpa.service.BookService;
 
+import jakarta.validation.Valid;
+
 @RestController
 @RequestMapping("/api")
 public class BookController {
@@ -42,12 +44,12 @@ public class BookController {
 	}
 	
 	@PutMapping("/books")
-	public ResponseEntity<BookEntity> updateBook(@RequestBody BookEntity editBook) {
+	public ResponseEntity<BookEntity> updateBook(@RequestBody @Valid BookEntity editBook) {
 		return new ResponseEntity<BookEntity>(bookService.updateBook(editBook), HttpStatus.OK);
 	}
 	
 	@PostMapping("/books")
-	public ResponseEntity<BookEntity> addBook(@RequestBody BookEntity newBook) {
+	public ResponseEntity<BookEntity> addBook(@RequestBody @Valid BookEntity newBook) {
 		return new ResponseEntity<BookEntity>(bookService.addBook(newBook), HttpStatus.OK);
 	}
 	

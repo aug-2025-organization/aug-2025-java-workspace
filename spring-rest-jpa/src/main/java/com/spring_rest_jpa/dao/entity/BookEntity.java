@@ -16,6 +16,8 @@ import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -32,24 +34,30 @@ public class BookEntity {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int bookId;
 	
+	
 	@Column(name="book_title")
+	@NotBlank(message = "Book Title cannot be empty!")
+	@NotNull(message="Book Title should be provided!")
 	private String bookTitle;
 	
 //	@Column(name="book_author_id")
 //	private int bookAuthorId;
 	
-	@JsonManagedReference
-	@ManyToOne(fetch = FetchType.LAZY)
+	//@JsonManagedReference
+	@ManyToOne
 	@JoinColumn(name="book_author_id")
 	private AuthorEntity author;
 	
 	@Column(name="book_published")
+	@NotNull(message="Book Published Date should be provided!")
 	private LocalDate bookPublished;
 	
 	@Column(name="book_category")
+	@NotNull(message="Book Category should be provided!")
 	private String bookCategory;
 	
 	@Column(name="book_price")
+	@NotNull(message="Book Price should be provided!")
 	private double bookPrice;
 	
 	@Column(name="book_image_url")

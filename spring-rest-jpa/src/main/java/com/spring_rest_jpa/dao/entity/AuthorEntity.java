@@ -34,7 +34,7 @@ public class AuthorEntity {
 	@Column(name="author_lastname")
 	private String authorLastname;
 	
-	@JsonBackReference
-	@OneToMany(mappedBy = "author", cascade = CascadeType.REMOVE)
-	List<BookEntity> allBooks;
+//	@JsonBackReference
+//	@OneToMany(mappedBy = "author", cascade = CascadeType.REMOVE)
+//	List<BookEntity> allBooks;
 }

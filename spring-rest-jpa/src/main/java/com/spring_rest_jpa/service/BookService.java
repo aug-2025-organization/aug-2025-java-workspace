@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.spring_rest_jpa.dao.BookDao;
 import com.spring_rest_jpa.dao.entity.BookEntity;
+import com.spring_rest_jpa.exception.BookNotFoundException;
 
 @Service
 public class BookService{
@@ -20,7 +21,11 @@ public class BookService{
 	}
 
 	public Optional<BookEntity> getABook(int bookId) {
-		return bookDao.findById(bookId);
+		Optional optBookEntity = bookDao.findById(bookId);
+		if(optBookEntity.isEmpty()) {
+			throw new BookNotFoundException(bookId);
+		}
+		return optBookEntity;
 	}
 
 	public BookEntity addBook(BookEntity newBook) {
