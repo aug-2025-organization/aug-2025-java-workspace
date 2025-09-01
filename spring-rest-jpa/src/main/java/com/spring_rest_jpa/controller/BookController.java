@@ -3,6 +3,8 @@ package com.spring_rest_jpa.controller;
 import java.util.List;
 import java.util.Optional;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -23,17 +25,21 @@ import jakarta.validation.Valid;
 @RestController
 @RequestMapping("/api")
 public class BookController {
-
+	
+	public static final Logger LOG = LoggerFactory.getLogger(BookController.class);
+	
 	@Autowired
 	BookService bookService;
 	
 	@GetMapping("/books")
 	public ResponseEntity<List<BookEntity>> getAllBooks(){
+		LOG.info("Entered getAllBooks() in controller...");
 		return new ResponseEntity<List<BookEntity>>(bookService.getAllBooks(), HttpStatus.OK);
 	}
 	
 	@GetMapping("/books/{bid}")
 	public ResponseEntity<Optional<BookEntity>> getABook(@PathVariable("bid") int bookId) {
+		LOG.info("Entered getABook() in controller...");
 		return new ResponseEntity<Optional<BookEntity>>(bookService.getABook(bookId), HttpStatus.OK);
 	}
 	

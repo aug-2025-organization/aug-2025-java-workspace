@@ -13,7 +13,7 @@ public class AuthorService {
 	
 	@Autowired
 	AuthorDao authorDao;
-	
+
 	public List<AuthorEntity> getAllAuthors(){
 		return authorDao.findAll();
 	}
