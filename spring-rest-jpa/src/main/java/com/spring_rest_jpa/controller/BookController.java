@@ -32,40 +32,40 @@ public class BookController {
 	@Autowired
 	BookService bookService;
 	
-	@PreAuthorize("hasAuthority('ROLE_USER')")
+	@PreAuthorize("hasAuthority('USER')")
 	@GetMapping("/books")
 	public ResponseEntity<List<BookEntity>> getAllBooks(){
 		LOG.info("Entered getAllBooks() in controller...");
 		return new ResponseEntity<List<BookEntity>>(bookService.getAllBooks(), HttpStatus.OK);
 	}
 	
-	@PreAuthorize("hasAuthority('ROLE_USER')")
+	@PreAuthorize("hasAuthority('USER')")
 	@GetMapping("/books/{bid}")
 	public ResponseEntity<Optional<BookEntity>> getABook(@PathVariable("bid") int bookId) {
 		LOG.info("Entered getABook() in controller...");
 		return new ResponseEntity<Optional<BookEntity>>(bookService.getABook(bookId), HttpStatus.OK);
 	}
 	
-	@PreAuthorize("hasAuthority('ROLE_ADMIN')")
+	@PreAuthorize("hasAuthority('ADMIN')")
 	@DeleteMapping("/books/{bookId}")
 	public ResponseEntity<Void> deleteBook(@PathVariable int bookId) {
 		bookService.deleteBook(bookId);
 		return new ResponseEntity<Void>(HttpStatus.OK);
 	}
 	
-	@PreAuthorize("hasAuthority('ROLE_ADMIN')")
+	@PreAuthorize("hasAuthority('ADMIN')")
 	@PutMapping("/books")
 	public ResponseEntity<BookEntity> updateBook(@RequestBody @Valid BookEntity editBook) {
 		return new ResponseEntity<BookEntity>(bookService.updateBook(editBook), HttpStatus.OK);
 	}
 	
-	@PreAuthorize("hasAuthority('ROLE_ADMIN')")
+	@PreAuthorize("hasAuthority('ADMIN')")
 	@PostMapping("/books")
 	public ResponseEntity<BookEntity> addBook(@RequestBody @Valid BookEntity newBook) {
 		return new ResponseEntity<BookEntity>(bookService.addBook(newBook), HttpStatus.OK);
 	}
 	
-	@PreAuthorize("hasAuthority('ROLE_USER')")
+	@PreAuthorize("hasAuthority('ADMIN')")
 	@GetMapping("/books/category/{bookCategory}")
 	public ResponseEntity<List<BookEntity>> getAllBooksByCategory(@PathVariable String bookCategory){
 		return new ResponseEntity<List<BookEntity>>(bookService.getAllBooksByCategory(bookCategory), HttpStatus.OK);
